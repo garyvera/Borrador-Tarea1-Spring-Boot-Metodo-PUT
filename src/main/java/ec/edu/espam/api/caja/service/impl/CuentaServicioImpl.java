@@ -24,4 +24,13 @@ public class CuentaServicioImpl implements CuentaServicio {
         return cuentaRepositorio.save(cuenta);
     }
 
+    @Override
+    public Cuenta editar(long id, Cuenta cuenta) {return cuentaRepositorio.save(cuenta);
+    }
+
+    @Override
+    public Cuenta obtenerPorId(Long id) {
+        return cuentaRepositorio.findById(id).orElse(null);
+    }
+
 }
